@@ -1,0 +1,9 @@
+campaign_name,impressions,clicks,spend,revenue,ctr
+Display - Prospecting,850000,8500,4200.00,12600.00,1.0
+Display - Retargeting,125000,5000,2100.00,10500.00,4.0
+Programmatic - PMPs,340000,6800,5100.00,15300.00,2.0
+YouTube - TrueView,920000,13800,7200.00,21600.00,1.5
+Native - Content Discovery,275000,4125,3300.00,9900.00,1.5
+Zero Spend Campaign,50000,1000,0.00,0.00,2.0
+Bad CTR Campaign,100000,500,1500.00,4500.00,95.5
+Mismatched CTR,200000,4000,2500.00,7500.00,5.0
