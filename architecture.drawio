@@ -1,0 +1,67 @@
+<mxfile host="65bd71144e">
+    <diagram name="Architecture" id="arch">
+        <mxGraphModel dx="1326" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="580" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Campaign Analyzer" style="text;html=1;fontSize=18;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="20" width="340" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;strokeWidth=2;" parent="1" source="3" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;strokeWidth=2;" parent="1" source="4" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;strokeWidth=2;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;strokeWidth=2;" parent="1" source="6" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;strokeWidth=2;" parent="1" source="7" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;strokeWidth=2;" parent="1" source="8" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#333333;strokeWidth=2;" parent="1" source="8" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;dashed=1;" parent="1" source="5" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;dashed=1;" parent="1" source="6" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="CLI&#xa;main() via Click" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="80" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="*.csv Files" style="shape=document;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="190" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Load &amp; Parse&#xa;load_campaigns()" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="80" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Validate&#xa;_validate_ctr()" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="190" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Filter&#xa;by min-spend" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="300" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Sort&#xa;by ROAS (desc)" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="410" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Campaign&#xa;dataclass" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="135" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Text Report&#xa;table + summary → stdout" style="rounded=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="380" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="CSV Export&#xa;→ file" style="rounded=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="450" width="180" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
