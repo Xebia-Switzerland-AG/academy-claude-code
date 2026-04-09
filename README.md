@@ -30,6 +30,25 @@ python -m campaign_analyzer sample_data/ --output csv --save-csv report.csv
 python -m campaign_analyzer sample_data/ --min-spend 500 --no-warnings
 ```
 
+## Agent (conversational interface)
+
+The agent wraps the analyzer in a conversational loop powered by the Claude Agent SDK.
+
+```bash
+python -m campaign_agent
+```
+
+Once running, type natural-language requests and the agent will call the appropriate tools:
+
+```
+You: load the campaigns and show me the top 5
+You: what's the overall ROAS?
+You: save a report to results/report.csv
+You: quit
+```
+
+The agent always starts from `./sample_data/` unless you specify a different path in your prompt. It surfaces any validation warnings automatically.
+
 ## Input Format
 
 Each CSV file must have these columns (case-insensitive):
