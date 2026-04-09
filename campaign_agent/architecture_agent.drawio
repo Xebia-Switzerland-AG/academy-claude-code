@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <mxCell id="title" value="Campaign Agent Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;fontColor=#1a1a2e;" vertex="1" parent="1">
+      <mxGeometry x="284" y="20" width="600" height="36" as="geometry" />
+    </mxCell>
+
+    <mxCell id="user" value="User" style="shape=mxgraph.general.user;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;html=1;" vertex="1" parent="1">
+      <mxGeometry x="534" y="70" width="50" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="repl" value="agent.py — REPL" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
+      <mxGeometry x="459" y="190" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="sdk" value="Claude Agent SDK" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
+      <mxGeometry x="459" y="300" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="claude" value="Claude claude-sonnet-4-6" style="rounded=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
+      <mxGeometry x="459" y="410" width="200" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="mcp" value="MCP Server — campaign_analyzer v1.0.0" style="swimlane;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;startSize=36;html=1;" vertex="1" parent="1">
+      <mxGeometry x="219" y="520" width="680" height="130" as="geometry" />
+    </mxCell>
+
+    <mxCell id="t1" value="load_campaigns" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;html=1;" vertex="1" parent="mcp">
+      <mxGeometry x="20" y="46" width="140" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="t2" value="get_top_campaigns" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;html=1;" vertex="1" parent="mcp">
+      <mxGeometry x="180" y="46" width="140" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="t3" value="get_summary" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;html=1;" vertex="1" parent="mcp">
+      <mxGeometry x="340" y="46" width="140" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="t4" value="save_report" style="rounded=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;html=1;" vertex="1" parent="mcp">
+      <mxGeometry x="500" y="46" width="140" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="lib" value="campaign_analyzer library" style="rounded=1;whiteSpace=wrap;fillColor=#f0f0f0;strokeColor=#666;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
+      <mxGeometry x="359" y="710" width="400" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="csv" value="CSV input" style="shape=cylinder3;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;html=1;" vertex="1" parent="1">
+      <mxGeometry x="209" y="715" width="100" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="report" value="CSV report" style="shape=cylinder3;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;html=1;" vertex="1" parent="1">
+      <mxGeometry x="809" y="715" width="100" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="user" target="repl" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e2" value="prompt" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="repl" target="sdk" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="sdk" target="claude" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e4" value="tool call" style="edgeStyle=orthogonalEdgeStyle;dashed=1;" edge="1" source="claude" target="mcp" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e5" value="tool result" style="edgeStyle=orthogonalEdgeStyle;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="mcp" target="claude" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="950" y="585" />
+          <mxPoint x="950" y="435" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <mxCell id="e6" value="response" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="sdk" target="user" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="400" y="325" />
+          <mxPoint x="400" y="100" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="mcp" target="lib" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="lib" target="csv" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e9" value="write" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="lib" target="report" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
